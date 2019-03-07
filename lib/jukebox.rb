@@ -39,8 +39,7 @@ def exit_jukebox
 end
 
 def run(songs)
-  help
-  input = gets.chomp
+  input = ""
   while input != "exit" do
     puts "Please enter a command:"
     input = gets.chomp
