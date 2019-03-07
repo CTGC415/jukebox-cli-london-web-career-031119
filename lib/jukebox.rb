@@ -27,7 +27,7 @@ def play(songs)
   choice = gets.chomp
   if choice === choice.to_i
     choice -= 1
-    songs[choice] !== nil ? ? (puts "Playing #{songs[choice]}") : (puts "Invalid input, please try again")
+    songs[choice] != nil ? ? (puts "Playing #{songs[choice]}") : (puts "Invalid input, please try again")
   else
     songs.include?(choice) ? (puts "Playing #{choice}") : (puts "Invalid input, please try again")
   end
