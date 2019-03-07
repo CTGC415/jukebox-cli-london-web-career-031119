@@ -24,7 +24,7 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  choice = get.chomp
+  choice = gets.chomp
   songs.include?(choice) ? (puts "Playing #{choice}") : (puts "Invalid input, please try again")
 end
 
