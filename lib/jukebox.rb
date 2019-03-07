@@ -28,7 +28,7 @@ def play(songs)
   if choice.to_i.integer?
     choice = choice.to_i
     choice -= 1
-    songs[choice].!empty? ? (put "Playing #{songs[choice]}") : (puts "Invalid input, please try again")
+    !songs[choice].empty? ? (put "Playing #{songs[choice]}") : (puts "Invalid input, please try again")
   else
     songs.include?(choice) ? (puts "Playing #{choice}") : (puts "Invalid input, please try again")
   end
