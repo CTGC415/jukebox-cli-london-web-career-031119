@@ -28,7 +28,8 @@ def play(songs)
   puts "Please enter a song name or number:"
   choice = gets.chomp
   if choice.to_s.to_i == choice.to_i
-    choice = choice.to_i -1
+    choice = choice.to_i
+    choice -= 1
     binding.pry
     songs[choice] != nil ? (puts "Playing #{songs[choice]}") : (puts "Invalid input, please try again")
   else
