@@ -18,11 +18,11 @@ def help
   puts "- exit : exits this program"
 end
 
-def list
+def list(songs)
   songs.each { |e| puts "#{songs.index(e) + 1}. #{e}" }
 end
 
-def play
+def play(songs)
   puts "Please enter a song name or number:"
   choice = get.chomp
   songs.include?(choice) ? (puts "Playing #{choice}") : (puts "Invalid input, please try again")
@@ -32,7 +32,7 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def run(song)
+def run(songs)
   help
   input = gets.chomp
   while input != "exit" do
@@ -42,9 +42,9 @@ def run(song)
     when "help"
       help
     when "list"
-      list
+      list(songs)
     when "play"
-      play
+      play(songs)
     when "exit"
       exit_jukebox
     else
