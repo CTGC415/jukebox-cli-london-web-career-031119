@@ -35,7 +35,7 @@ end
 def run(song)
   help
   input = gets.chomp
-  while input == "exit" do
+  while input != "exit" do
     puts "Please enter a command:"
     input = gets.chomp
     case input
