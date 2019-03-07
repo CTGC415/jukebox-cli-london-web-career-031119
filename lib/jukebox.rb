@@ -25,7 +25,7 @@ end
 def play
   puts "Please enter a song name or number:"
   choice = get.chomp
-  songs.include?(choice) ? puts "Playing #{choice}" : puts "Invalid input, please try again"
+  songs.include?(choice) ? (puts "Playing #{choice}") : (puts "Invalid input, please try again")
 end
 
 def exit_jukebox
