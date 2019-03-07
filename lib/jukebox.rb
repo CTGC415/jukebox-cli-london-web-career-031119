@@ -1,3 +1,5 @@
+include 'pry'
+
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -27,6 +29,7 @@ def play(songs)
   choice = gets.chomp
   if choice == choice.to_i
     choice -= 1
+    binding.pry
     songs[choice] != nil ? (puts "Playing #{songs[choice]}") : (puts "Invalid input, please try again")
   else
     songs.include?(choice) ? (puts "Playing #{choice}") : (puts "Invalid input, please try again")
